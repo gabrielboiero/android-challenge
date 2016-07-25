@@ -21,7 +21,7 @@
   * start Genymotion emulator with any device (Nexus 5 with Android 5.1.0 works fine)
   * in android-challenge/bin directory:
 ```
-      $ java -jar selendroid-standalone-0.17.0-with-dependencies.jar -aut android-debug.apk
+    $ java -jar selendroid-standalone-0.17.0-with-dependencies.jar -aut android-debug.apk
 ```
 
     this will run selendroid server in Genymotion emulator and also copy the application under test
