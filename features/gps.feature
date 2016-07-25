@@ -1,6 +1,5 @@
 Feature: Verify correct behaviour from GPS sensor on mobile device, updating locations and retrieve correct values. External conditions should not affect stability of application
 
-  @wip
   Scenario Outline: Fixed location testing updating on several coordinates
     Given Set virtual GPS on "<location>" with coordinates "<latitude>" and "<longitude>"
     When Query values from Geolocation
@@ -9,13 +8,13 @@ Feature: Verify correct behaviour from GPS sensor on mobile device, updating loc
       | location | latitude  | longitude |
       | home     | -34.82532 | -57.97322 |
       | coast    | -34.82060 | -57.96747 |
-      #    | beach    |           |           |
+      | beach    | -34.81681 | -57.97076 |
       | home     | -34.82532 | -57.97322 |
 
 
   Scenario: Stress-test for update position on device in same place
     Given Set virtual GPS on "home" with coordinates "-34.82532" and "-57.97322"
-    When Update position 5 times
+    When Update position 25 times
     And Query values from Geolocation
     Then It should retrieve same pre-fixed coordinates
 

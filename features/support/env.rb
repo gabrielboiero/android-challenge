@@ -18,8 +18,6 @@ Before do |scenario|
 end
 
 After do |scenario|
-  #driver.quit
-  #reset_driver
 end
 
 at_exit do
